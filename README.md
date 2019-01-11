@@ -1,27 +1,17 @@
-# AngularUniversalizeEmailDemo
+# angular-universalize-email-demo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.3.
+This is a demo project for [angular-universailze-email](https://github.com/sohoffice/angular-universalize-email)
 
-## Development server
+The main purposes of this project are:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Compose a welcome email with Angular / Material components.
+- Create a simple page that can trigger sending this welcome email.
+- An example to show how `angular-universalize-email` can be used.
 
-## Code scaffolding
+## Use
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Please go to [this site](https://sohoffice.github.io/angular-universalize-email/home) to use the UI.
 
-## Build
+## Reference
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+If you're looking for angular-universalize-demo example, you most likely will want to look into the project/email folder.
