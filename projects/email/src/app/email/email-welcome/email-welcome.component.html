@@ -1,0 +1,60 @@
+<!--
+Header: @(email: String, username: Option[String])
+-->
+
+<div class="container mt-1 nue-email">
+  <div class="d-none">
+    Welcome to the angular-universalize-email example web site.
+    angular-universalize-email is a free utility that allows an angular project to generate email templates using angular universal.
+  </div>
+
+  <mat-card class="fill-x fill-t">
+    <mat-card-header class="mat-primary mb-5">
+      <mat-card-title class="mat-display-3">
+        angular-universalize-email
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        @if(username) <nue-b>
+        Hi @username.get:
+      </nue-b> else <nue-b>
+        Hi my friend:
+      </nue-b>
+      </p>
+
+      <p>This is a welcome letter powered by angular-universalize-email.</p>
+
+      <p>
+        <a href="https://github.com/sohoffice/angular-universalize-email">angular-universalize-email</a> is an open source
+        utility that allows an angular project to generate email templates using angular universal.</p>
+
+      <p>
+        You can develop your email template with Angular, and add them to any server side technology.
+      </p>
+
+      <p>
+        You may also pair it with cliend side template engine to produce the email body.
+        <br/>
+        However, <b>this is not recommended.</b>
+      </p>
+
+      <p>
+        Hope you enjoy it.
+      </p>
+
+      <div class="mb-3">
+        <h6>Read more</h6>
+        <a href="https://github.com/sohoffice/angular-universalize-email" mat-button class="mr-1">Github</a>
+        <a href="https://www.npmjs.com/package/angular-universalize-email" mat-button class="mr-1">NPM</a>
+        <h6>Recipes</h6>
+        <a href="" mat-button class="mr-1">Play framework scala template</a>
+      </div>
+
+      <p>
+        <a href="https://medium.com/@@sohoffice">sohoffice</a>, Happy coding ~
+      </p>
+    </mat-card-content>
+  </mat-card>
+
+</div>

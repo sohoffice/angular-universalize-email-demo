@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* angular-universalize-email styles */
+@import "~angular-universalize-email/styles.css";
+
+.mat-card {
+  &.fill-x {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    .mat-card-content, .mat-card-footer, .mat-card-actions {
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+  }
+
+  &.fill-t {
+    padding-top: 0 !important;
+  }
+}

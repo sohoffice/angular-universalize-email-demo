@@ -123,6 +123,137 @@
           }
         }
       }
+    },
+    "email": {
+      "root": "projects/email/",
+      "sourceRoot": "projects/email/src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/email",
+            "index": "projects/email/src/index.html",
+            "main": "projects/email/src/main.ts",
+            "polyfills": "projects/email/src/polyfills.ts",
+            "tsConfig": "projects/email/tsconfig.app.json",
+            "assets": [
+              "projects/email/src/favicon.ico",
+              "projects/email/src/assets"
+            ],
+            "styles": [
+              "src/demo-theme.scss",
+              "src/styles.scss",
+              "projects/email/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/email/src/environments/environment.ts",
+                  "with": "projects/email/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "email:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "email:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "email:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/email/src/test.ts",
+            "polyfills": "projects/email/src/polyfills.ts",
+            "tsConfig": "projects/email/tsconfig.spec.json",
+            "karmaConfig": "projects/email/karma.conf.js",
+            "styles": [
+              "src/demo-theme.scss",
+              "src/styles.scss",
+              "projects/email/src/styles.scss"
+            ],
+            "scripts": [],
+            "assets": [
+              "projects/email/src/favicon.ico",
+              "projects/email/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/email/tsconfig.app.json",
+              "projects/email/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/email-server",
+            "main": "projects/email/src/main.server.ts",
+            "tsConfig": "projects/email/tsconfig.server.json"
+          }
+        }
+      }
+    },
+    "email-e2e": {
+      "root": "projects/email-e2e/",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/email-e2e/protractor.conf.js",
+            "devServerTarget": "email:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "email:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "projects/email-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "angular-universalize-email-demo",
