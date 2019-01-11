@@ -1,0 +1,36 @@
+<div class="container home-page">
+  <div class="row">
+    <div class="col-sm-12 col-lg-6 offset-lg-3">
+
+      <mat-card class="fill-x fill-t">
+        <mat-card-header class="mb-5">
+          <mat-card-title class="mat-display-3">
+            Welcome letter
+          </mat-card-title>
+          <mat-card-subtitle>
+            Send a welcome letter made of &lt;mat-card/&gt; to your mailbox.
+          </mat-card-subtitle>
+        </mat-card-header>
+
+        <form id="welcome-form" [formGroup]="form" (ngSubmit)="onSubmit($event)">
+          <mat-card-content>
+            <div class="form-group">
+              <mat-form-field>
+                <input class="form-control" matInput placeholder="Email" formControlName="email"/>
+              </mat-form-field>
+            </div>
+            <div class="form-group">
+              <mat-form-field>
+                <input class="form-control" matInput placeholder="Your name" formControlName="username"/>
+              </mat-form-field>
+            </div>
+          </mat-card-content>
+          <mat-card-actions class="text-center">
+            <button mat-raised-button [disabled]="working">Send</button>
+          </mat-card-actions>
+        </form>
+      </mat-card>
+
+    </div>
+  </div>
+</div>
