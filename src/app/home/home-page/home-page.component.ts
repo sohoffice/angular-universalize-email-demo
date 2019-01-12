@@ -4,6 +4,7 @@ import {MatSnackBar} from '@angular/material';
 import {HttpClient} from '@angular/common/http';
 import {noop} from 'rxjs';
 import {finalize, tap} from 'rxjs/operators';
+import {Meta} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home-page',
@@ -17,7 +18,8 @@ export class HomePageComponent implements OnInit {
 
   constructor(private fb: FormBuilder,
               private snackBar: MatSnackBar,
-              private http: HttpClient) {
+              private http: HttpClient,
+              private meta: Meta) {
     this.form = this.fb.group({
       email: this.fb.control('', [Validators.required, Validators.email, Validators.maxLength(200)]),
       username: this.fb.control(undefined, Validators.maxLength(40))
