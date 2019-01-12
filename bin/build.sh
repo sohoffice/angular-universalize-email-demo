@@ -19,6 +19,12 @@ git clean -fdx
 cd $DIR
 npm run build:deploy
 
+echo "---
+permalink: /404.html
+---
+" > "$BASEDIR/dist/angular-universalize-email-demo/404.html"
+cat "$BASEDIR/dist/angular-universalize-email-demo/index.html" >> "$BASEDIR/dist/angular-universalize-email-demo/404.html"
+
 cd $TARGET
 cp -R "$BASEDIR/dist/angular-universalize-email-demo"/* $TARGET
 git add .
@@ -26,4 +32,4 @@ git commit -a -m "pages commit, $now"
 
 echo
 echo Build complete, please review the output in target folder.
-echo Run the command to push it to github: 'git push origin gh-pages'
+echo "Run the command to push it to github: 'bin/publish.sh'"
