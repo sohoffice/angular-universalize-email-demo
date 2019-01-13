@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:deploy": "ng build --prod --aot --deploy-url=https://sohoffice.github.io/angular-universalize-email/ --base-href=/angular-universalize-email",
+    "build:deploy": "ng build --prod --aot --deploy-url=https://sohoffice.github.io/angular-universalize-email-demo/ --base-href=/angular-universalize-email-demo",
     "build:email": "ng build --extract-css --project email && ng run email:server",
     "start:email": "ng serve --project email --ssl",
     "watch:email": "ng build --watch --extract-css --project email",

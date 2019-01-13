@@ -10,7 +10,7 @@ rm -rf "$TARGET"
 
 cd $BASEDIR
 
-git clone https://github.com/sohoffice/angular-universalize-email.git target
+git clone https://github.com/sohoffice/angular-universalize-email-demo.git target
 cd $TARGET
 
 git checkout gh-pages

@@ -43,7 +43,9 @@ export class HomePageComponent implements OnInit {
     this.http.post('https://gowithme-prod.herokuapp.com/oss/nue-welcome', this.form.value).pipe(
       tap(res => {
         if (res === 'ok') {
-          this.snackBar.open(`Email sent to ${this.form.value.email}`);
+          this.snackBar.open(`Email sent to ${this.form.value.email}`, 'OK', {
+            duration: 5000
+          });
         }
       }),
       finalize(() => {
