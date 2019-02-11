@@ -15,7 +15,3 @@ Please go to [this site](https://sohoffice.github.io/angular-universalize-email-
 ## Reference
 
 If you're looking for angular-universalize-demo example, you most likely will want to look into the project/email folder.
-
-## Credits
-
-- Photo by [Tania Melnyczuk](https://unsplash.com/photos/v03djnPOkco?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/mail?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
