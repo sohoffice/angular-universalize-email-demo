@@ -10,7 +10,7 @@ The main purposes of this project are:
 
 ## Use
 
-Please go to [this site](https://sohoffice.github.io/angular-universalize-email/home) to use the UI.
+Please go to [this site](https://sohoffice.github.io/angular-universalize-email-demo/home) to use the UI.
 
 ## Reference
 
